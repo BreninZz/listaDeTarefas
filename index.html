@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .remover {
+            margin-left: 10px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .remover:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Minha Lista de Tarefas</h1>
+
+        <div class="filter">
+            <label for="filtro">Filtrar por:</label>
+            <select id="filtro">
+                <option value="todas">Todas</option>
+                <option value="concluidas">Concluídas</option>
+                <option value="naoConcluidas">Não Concluídas</option>
+            </select>
+        </div>
+
+        <ul id="lista-de-tarefas">
+        </ul>
+
+        <div class="add-task">
+            <input type="text" id="tarefaInput" placeholder="Adicionar nova tarefa">
+            <button id="adicionarTarefa">Adicionar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
